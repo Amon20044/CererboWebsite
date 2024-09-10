@@ -22,37 +22,43 @@ function LandingArea() {
   useEffect(() => {
     // Parallax effect for client images in the bottom layer
     imageRefs.current.forEach((el, index) => {
-      gsap.to(el, {
-        y: (index + 1) * 50, // Parallax effect intensity (higher index = stronger effect)
-        ease: 'none',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top bottom', // Start animation when image enters the viewport
-          end: 'bottom top',
-          scrub: true, // Smooth parallax scroll
-        },
-      });
+      gsap.fromTo(el, 
+        { y: -100 }, // Start position (off the top)
+        {
+          y: (index + 1) * 50, // End position (adjust as needed)
+          ease: 'none',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top bottom', // Start animation when image enters the viewport
+            end: 'bottom top',
+            scrub: true, // Smooth parallax scroll
+          },
+        }
+      );
     });
 
     // Parallax effect for top layer images
     topLayerRefs.current.forEach((el, index) => {
-      gsap.to(el, {
-        y: 50 * (index + 1), // Adjust the parallax intensity as needed
-        ease: 'none',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top bottom', // Start animation when image enters the viewport
-          end: 'bottom top',
-          scrub: true, // Smooth parallax scroll
-        },
-      });
+      gsap.fromTo(el, 
+        { y: 0 }, // Start position
+        {
+          y: 200 * (index + 1), // End position (adjust as needed)
+          ease: 'none',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top bottom', // Start animation when image enters the viewport
+            end: 'bottom top',
+            scrub: true, // Smooth parallax scroll
+          },
+        }
+      );
     });
   }, []);
 
   return (
     <div className="relative">
       {/* Top Layer */}
-      <div className="absolute inset-0 topLayer z-[10]">
+      <div className="absolute inset-0 topLayer z-0 translate-y-[10vh]">
         {/* Container with gradient background */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
           <div className="relative w-full h-full flex justify-center items-center">
@@ -83,7 +89,7 @@ function LandingArea() {
       </div>
 
       {/* Bottom Layer */}
-      <div className="relative z-0 flex flex-col items-center justify-center min-h-screen">
+      <div className="relative -z-10 flex flex-col items-center -translate-y-[15vh] justify-center min-h-screen">
         {images.map((image, index) => (
           <div
             key={index}
