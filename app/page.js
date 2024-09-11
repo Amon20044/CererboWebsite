@@ -4,6 +4,9 @@ import LandingArea from '../components/LandingArea';
 import Lenis from 'lenis' // Ensure Lenis is imported correctly
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from "next/image";
+import About from '../components/about';
+import UnleashBanner from "../assets/LandingArea/UnleashBanner.svg"
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -41,9 +44,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col w-screen overflow-x-hidden">
       {/* LandingArea Component containing GSAP animations */}
-      <LandingArea />
+      <div className="block"><LandingArea /></div>
+      <div className="block"><About/></div>
     </div>
   );
 }
