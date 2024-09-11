@@ -10,6 +10,7 @@ import cyborg from '../assets/LandingArea/Cyborg.png';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion'; // Import Framer Motion
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,17 +92,20 @@ function LandingArea() {
       {/* Bottom Layer */}
       <div className="relative -z-10 flex flex-col items-center -translate-y-[15vh] justify-center min-h-screen">
         {images.map((image, index) => (
-          <div
+          <motion.div
             key={index}
             className="p-6"
             ref={(el) => (imageRefs.current[index] = el)} // Assign refs for each image
+            initial={{ opacity: 0 }} // Start with opacity 0
+            animate={{ opacity: 1 }} // Transition to opacity 1
+            transition={{ duration: 1, delay: index * 0.3 }} // Add delay for staggered effect
           >
             <Image
               src={image}
               alt={`Client ${index + 1}`}
               className="w-full"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

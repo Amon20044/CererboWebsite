@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center">
       {/* LandingArea Component containing GSAP animations */}
       <LandingArea />
     </div>
