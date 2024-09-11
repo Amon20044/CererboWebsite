@@ -26,7 +26,6 @@ const sponsorPage=()=>{
                 <Image src={FigmaImg} width={200} height={100} alt="image" className="py-4 m-4"/>
                 <p className="font-inter max-w-3xl flex justify-center text-center items-center px-4">We are proud to announce [Sponsor Name] as the Title Sponsor for Cerebro 2024: Clash of Intellects - Human vs AI, the flagship annual tech fest of IIIT Vadodara. Their unwavering support and commitment to innovation and technology make them a perfect partner for this groundbreaking event. With their backing, we are set to explore the cutting edge of human ingenuity and artificial intelligence.</p>
             </div>
-
         </div>
     )
 }
