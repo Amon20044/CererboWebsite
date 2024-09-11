@@ -1,24 +1,30 @@
 "use client";
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const form = useRef();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_6t8se1v', 'template_2kwoj4n', form.current, {
-        publicKey: 'Ct7d36vKg7kXb45qJ',
+      .sendForm("service_6t8se1v", "template_2kwoj4n", form.current, {
+        publicKey: "Ct7d36vKg7kXb45qJ",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setIsSuccess(true);
+          setErrorMessage("");
+          form.current.reset(); // Reset form after successful submission
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          setErrorMessage("Failed to send message. Please try again.");
+          setIsSuccess(false);
+          console.error("FAILED...", error.text);
+        }
       );
   };
 
@@ -31,10 +37,23 @@ const ContactUs = () => {
         <p className="mt-2 text-center text-sm text-gray-400">
           We'd love to hear from you!
         </p>
+        {isSuccess && (
+          <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100" role="alert">
+            Your message has been successfully sent! We will get back to you soon.
+          </div>
+        )}
+        {errorMessage && (
+          <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100" role="alert">
+            {errorMessage}
+          </div>
+        )}
         <form ref={form} onSubmit={sendEmail} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm -space-y-px">
             <div className="mb-4">
-              <label htmlFor="user_name" className="block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="user_name"
+                className="block text-sm font-medium text-gray-300"
+              >
                 Name
               </label>
               <input
@@ -47,7 +66,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="user_contact" className="mt-4 block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="user_contact"
+                className="mt-4 block text-sm font-medium text-gray-300"
+              >
                 Contact Information
               </label>
               <input
@@ -60,7 +82,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="user_email" className="mt-4 block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="user_email"
+                className="mt-4 block text-sm font-medium text-gray-300"
+              >
                 Email
               </label>
               <input
@@ -73,7 +98,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="message" className="mt-4 block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="message"
+                className="mt-4 block text-sm font-medium text-gray-300"
+              >
                 Message
               </label>
               <textarea
