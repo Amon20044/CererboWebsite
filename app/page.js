@@ -5,7 +5,7 @@ import Lenis from 'lenis' // Ensure Lenis is imported correctly
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/image";
-import About from '../components/about';
+import About from '../components/About';
 import UnleashBanner from "../assets/LandingArea/UnleashBanner.svg"
 
 // Register ScrollTrigger
