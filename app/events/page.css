@@ -1,0 +1,27 @@
+/* Keyframes for pop-up effect */
+@keyframes popUp {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Class for animation */
+  .pop-up {
+    animation: popUp 0.5s ease-out;
+  }
+
+  /* styles.css */
+.button-active {
+    position: relative;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  
