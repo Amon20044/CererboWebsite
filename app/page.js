@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/image";
 import About from '../components/About';
+import Strip1 from '../components/Strip1';
+import Edition from '../components/Edition';
 import UnleashBanner from "../assets/LandingArea/UnleashBanner.svg"
 
 // Register ScrollTrigger
@@ -48,6 +50,8 @@ export default function Home() {
       {/* LandingArea Component containing GSAP animations */}
       <div className="block"><LandingArea /></div>
       <div className="block"><About/></div>
+      <div className="block"><Strip1/></div>
+      <div className="block"><Edition/></div>
     </div>
   );
 }

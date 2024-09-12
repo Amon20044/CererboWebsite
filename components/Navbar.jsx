@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -79,39 +79,38 @@ const Navbar = () => {
 
   return (
     <nav className="py-4 w-screen flex justify-center bg-transparent">
-      <div className="container flex justify-between items-center px-4 bg-transparent">
-        {/* Left side - Orange */}
-        <div className="hidden md:flex space-x-4 bg-orange-500 rounded-xl px-6 py-6">
+      <div className="flex justify-between items-center bg-transparent px-0 w-full">
+        {/* Left side - Orange (Hidden on tablet/mobile) */}
+        <div className="max-lg:hidden max-lg:text-xs flex flex-row justify-between bg-orange-500 rounded-xl px-8 ml-8 py-4 w-[35%]">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/events">Events</NavLink>
           <NavLink href="/merch">Merch</NavLink>
         </div>
 
-        {/* Logo */}
-        <div className="text-center py-2 px-4 flex justify-center">
+        {/* Logo - Always Visible, Centered in Tablet/Mobile View */}
+        <div className="flex py-2 px-4 justify-center w-auto lg:ml-auto lg:mr-auto max-lg:absolute max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2">
           <Image
             src={cerebro}
-            alt='cerebro 2024-25'
-            
-            className="max-w-full h-auto" // Ensures the logo scales responsively
+            alt="cerebro 2024-25"
+            className="max-w-full h-auto"
           />
         </div>
 
-        {/* Right side - Purple */}
-        <div className="hidden md:flex space-x-4 bg-purple-500 rounded-xl px-6 py-6">
+        {/* Right side - Purple (Hidden on tablet/mobile) */}
+        <div className="max-lg:text-xs max-lg:hidden flex flex-row justify-between bg-purple-500 rounded-xl px-8 py-4 w-[35%] mr-8">
           <NavLink href="/sponsors">Sponsors</NavLink>
           <NavLink href="/team">Team</NavLink>
-          <NavLink href="/contactUs">Contact Us</NavLink>
+          <NavLink href="/contactUs">Contact_Us</NavLink>
         </div>
 
-        {/* Hamburger Menu */}
+        {/* Hamburger Menu for Tablet/Mobile */}
         <motion.div
-          className="md:hidden"
+          className="lg:hidden ml-auto mr-4"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           <button onClick={toggleMenu} className="text-white">
-            <Menu size={24} />
+            <Menu size={28} />
           </button>
         </motion.div>
       </div>
@@ -132,9 +131,9 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <X size={32} />
+              <X size={28} />
             </motion.button>
-            <div className="flex flex-col space-y-6 text-4xl">
+            <div className="flex flex-col space-y-6 text-4xl text-center">
               <NavLink href="/">Home</NavLink>
               {['Events', 'Merch', 'Sponsors', 'Team', 'Contact Us'].map((item, i) => (
                 <motion.div key={item} custom={i} variants={linkVariants}>
