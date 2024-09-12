@@ -81,7 +81,7 @@ const Navbar = () => {
     <nav className="py-4 w-screen flex justify-center bg-transparent">
       <div className="flex justify-between items-center bg-transparent px-0 w-full">
         {/* Left side - Orange (Hidden on tablet/mobile) */}
-        <div className="max-lg:hidden max-lg:text-xs flex flex-row justify-between bg-orange-500 rounded-xl px-8 ml-8 py-4 w-[35%]">
+        <div className="max-lg:hidden max-lg:text-xs flex flex-row justify-between bg-orange-500 rounded-xl px-16 ml-8 py-4 w-[35%]">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/events">Events</NavLink>
           <NavLink href="/merch">Merch</NavLink>
@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
 
         {/* Right side - Purple (Hidden on tablet/mobile) */}
-        <div className="max-lg:text-xs max-lg:hidden flex flex-row justify-between bg-purple-500 rounded-xl px-8 py-4 w-[35%] mr-8">
+        <div className="max-lg:text-xs max-lg:hidden flex flex-row justify-between bg-purple-500 rounded-xl px-16 py-4 w-[35%] mr-8">
           <NavLink href="/sponsors">Sponsors</NavLink>
           <NavLink href="/team">Team</NavLink>
           <NavLink href="/contactUs">Contact_Us</NavLink>

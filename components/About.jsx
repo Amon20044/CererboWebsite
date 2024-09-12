@@ -6,7 +6,7 @@ import Carousel from './Carousel'; // Import the Carousel component
 
 function About() {
   return (
-    <div className='flex flex-col lg:flex-row content-center items-center justify-center bg-[#212121] w-screen px-20 max-lg:p-12 max-lg:px-4'>
+    <div className='flex flex-col lg:flex-row content-center items-center justify-center bg-[#212121] w-screen px-28 max-lg:p-12 max-lg:px-4'>
       
       {/* Animate the portal image */}
       <motion.div 

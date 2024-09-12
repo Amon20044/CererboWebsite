@@ -1,45 +1,58 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LandingArea from '../components/LandingArea';
-import Lenis from 'lenis' // Ensure Lenis is imported correctly
+import Lenis from 'lenis'; 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/image";
 import About from '../components/About';
 import Strip1 from '../components/Strip1';
 import Edition from '../components/Edition';
-import UnleashBanner from "../assets/LandingArea/UnleashBanner.svg"
+import UnleashBanner from "../assets/LandingArea/UnleashBanner.svg";
+import CTA from "../assets/LandingArea/CTABanner.svg";
+import Merch from "../components/Merch";
+import Loader from '../components/Loader'; // Import the Loader component
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
   useEffect(() => {
+    const handleProgress = () => {
+      // Simulate loading progress (for demonstration purposes)
+      // You can replace this with actual progress tracking if available
+      let percent = 0;
+      const interval = setInterval(() => {
+        percent += 10; // Increment progress
+        setProgress(percent);
+        if (percent >= 100) {
+          clearInterval(interval);
+          setLoading(false); // Hide the loader when progress reaches 100%
+        }
+      }, 500); // Update every 500ms
+    };
+
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2, // Duration of the smooth scroll effect
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) // Easing function for smooth effect
+      duration: 1.2, 
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
     });
 
-    // Lenis scroll event listener
     lenis.on('scroll', (e) => {
-      console.log(e); // Log the scroll event (useful for debugging)
-    });
-
-    // Update GSAP's ScrollTrigger on each scroll
-    lenis.on('scroll', () => {
       ScrollTrigger.update();
     });
 
-    // Sync Lenis with GSAP ticker for smooth RAF (RequestAnimationFrame)
     gsap.ticker.add((time) => {
-      lenis.raf(time * 1000); // Time is converted for smoother updates
+      lenis.raf(time * 1000);
     });
 
-    // Disable lag smoothing for GSAP to avoid any lag issues
     gsap.ticker.lagSmoothing(0);
 
-    // Cleanup function to remove the ticker when the component unmounts
+    handleProgress(); // Start the progress simulation
+
     return () => {
       gsap.ticker.remove(lenis.raf);
     };
@@ -47,11 +60,22 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-screen overflow-x-hidden">
-      {/* LandingArea Component containing GSAP animations */}
-      <div className="block"><LandingArea /></div>
-      <div className="block"><About/></div>
-      <div className="block"><Strip1/></div>
-      <div className="block"><Edition/></div>
+      {loading ? (
+        <Loader progress={progress} />  // Show the loader with progress
+      ) : (
+        <>
+          <div className="block"><LandingArea /></div>
+          <div className="block"><About/></div>
+          <div className="block"><Strip1/></div>
+          <div className="block"><Edition/></div>
+          <div className={`relative w-screen h-auto bg-white items-center flex max-md:scale-125`}>
+                <Image src={CTA} alt="CTA Banner" className="object-contain" objectFit="contain" />
+          </div>
+          <div className="block">
+            <Merch/>
+          </div>
+        </>
+      )}
     </div>
   );
 }
