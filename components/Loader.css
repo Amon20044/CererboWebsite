@@ -10,6 +10,16 @@
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ensures it's on top of everything */
+    transition: opacity 2s ease-out; /* Smooth opacity transition */
+  }
+  
+  .loader-container.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .loader-container.visible {
+    opacity: 1;
   }
   
   .loader {
@@ -18,13 +28,18 @@
     align-items: center;
   }
   
-  .triangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid #E63946;
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
     animation: rotate 2s infinite linear; /* Rotating effect */
+  }
+  
+  .logo {
+    width: 100%;
+    height: 100%;
   }
   
   .progress {

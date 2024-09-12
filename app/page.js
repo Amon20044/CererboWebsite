@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleProgress = () => {
@@ -30,7 +31,10 @@ export default function Home() {
         setProgress(percent);
         if (percent >= 100) {
           clearInterval(interval);
-          setLoading(false); // Hide the loader when progress reaches 100%
+          setTimeout(() => {
+            setIsVisible(false); // Hide the loader after opacity transition
+            setLoading(false); // Hide the loader when progress reaches 100%
+          }, 2000); // Match the CSS transition duration
         }
       }, 500); // Update every 500ms
     };
@@ -41,7 +45,7 @@ export default function Home() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
     });
 
-    lenis.on('scroll', (e) => {
+    lenis.on('scroll', () => {
       ScrollTrigger.update();
     });
 
@@ -58,11 +62,16 @@ export default function Home() {
     };
   }, []);
 
+  const handleLoaderTransitionEnd = () => {
+    // This callback can be used if additional actions are needed after loader transition
+  };
+
   return (
     <div className="flex flex-col w-screen overflow-x-hidden">
-      {loading ? (
-        <Loader progress={progress} />  // Show the loader with progress
-      ) : (
+      {loading && (
+        <Loader progress={progress} isVisible={isVisible} onTransitionEnd={handleLoaderTransitionEnd} />
+      )}
+      {!loading && (
         <>
           <div className="block"><LandingArea /></div>
           <div className="block"><About/></div>
