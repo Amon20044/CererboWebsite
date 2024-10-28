@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import tshirt from '../assets/LandingArea/TShirtCB.png'; // Assuming the t-shirt image is here
 import Image from 'next/image';
+import Merch3d from './Merch3d';
 
 function Merch() {
   const tshirtRef = useRef(null);
@@ -30,7 +31,7 @@ function Merch() {
         <p className='text-base md:text-lg text-gray-300 mb-4'>
           Wear the spirit of innovation with our limited edition merchandise. Available for a limited time, grab your official Cerebro T-Shirt now!
         </p>
-        <button className='px-4 py-2 md:px-6 md:py-3 bg-[#E63946] text-white font-semibold rounded-md hover:bg-[#D62839] transition duration-300'>
+        <button onClick={() => window.open("https://forms.gle/ZTxzNg33Txh9KUdw9")} className='px-4 py-2 md:px-6 md:py-3 bg-[#E63946] text-white font-semibold rounded-md hover:bg-[#D62839] transition duration-300'>
           Buy Now
         </button>
       </div>
@@ -38,21 +39,22 @@ function Merch() {
       {/* Right Section: Floating Image */}
       <div className='w-full md:w-[40%] flex justify-center items-center p-6 md:p-12'>
         {/* Apply floating effect using GSAP */}
-        <motion.div
+        {/* <motion.div
           ref={tshirtRef}
           className="relative"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-        >
-          <Image
+        > */}
+          {/* <Image
             src={tshirt}
             alt="Cerebro T-Shirt"
             width={300}
             height={300}
             className="w-auto h-auto"
-          />
-        </motion.div>
+          /> */}
+          <Merch3d />
+        {/* </motion.div> */}
       </div>
     </div>
   );
