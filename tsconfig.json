@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/sponsors/page.jsx"  ],
+, "app/sponsors/page.jsx", "app/sitemap.js"  ],
   "exclude": [
     "node_modules"
   ]
