@@ -25,6 +25,7 @@ const elevonTwoG = localFont({
 });
 
 export const metadata = {
+  "google-site-verification":"44bwBMeH2MsvcMLjVOkAYLLii4Jz6pD1j-rrRChNuag",
   title: "CEREBRO 2024 - IIITV's Annual Technical Fest",
   description: "Explore CEREBRO 2024, the ultimate technical fest hosted by IIIT Vadodara! Join us for a celebration of innovation, competitions, workshops, and tech talks, with exciting events for students, professionals, and tech enthusiasts. Stay updated on schedules, speaker lineups, and live announcements. Experience the spirit of technology and collaboration at IIITV's premier tech fest, built with Next.js for an interactive, smooth user experience.",
   metadataBase:new URL("https://cerebro2024.vercel.app/"),
