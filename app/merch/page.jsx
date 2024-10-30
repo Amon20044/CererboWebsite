@@ -1,9 +1,12 @@
+'use client'
 import React from 'react'
-
-function Merch() {
+import Merch from "../../components/Merch";
+function Meerch() {
   return (
-    <div>Merch</div>
+    <div>
+      <Merch/>
+    </div>
   )
 }
 
-export default Merch
+export default Meerch

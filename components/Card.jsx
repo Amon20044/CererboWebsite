@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import "./Card.css";
 
-const Card = ({ title, prize, description, image }) => {
+const Card = ({ title, prize, description, image, link }) => {
   const cardRef = useRef(null);
 
   // GSAP Animation
@@ -31,6 +31,10 @@ const Card = ({ title, prize, description, image }) => {
       duration: 0.3,
       ease: "easeInOut",
     },
+  };
+
+  const handleRedirect = () => {
+    window.location.href = link;
   };
 
   return (
@@ -60,7 +64,7 @@ const Card = ({ title, prize, description, image }) => {
         <h1 className="text-yellow-400 text-2xl font-semibold">{prize}</h1>
 
         {/* Centered Button */}
-        <div className="flex p-12 justify-center">
+        <div className="flex p-12 justify-center" onClick={handleRedirect}>
           <button className="button">
             <div className="bg"></div>
             <svg

@@ -34,6 +34,266 @@ function Team() {
         </div>
       </div>
 
+      {/* Sponsorship Team*/}
+      {activeEvent === 'Sponsorship Team' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='flex flex-wrap justify-center mt-10 gap-4'>
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Design Team */}
+      {activeEvent === 'Design Team' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='flex flex-wrap justify-center mt-10 gap-4'>
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/* On-Ground Team */}
+      {activeEvent === 'On-Ground Team' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='flex flex-wrap justify-center mt-10 gap-4'>
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Logistics Team*/}
+      {activeEvent === 'Logistics Team' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='flex flex-wrap justify-center mt-10 gap-4'>
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/*Public Relation Team*/}
+      {activeEvent === 'Public Relation Team' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='flex flex-wrap justify-center mt-10 gap-4'>
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
       {/* Web Dev Team */}
       {activeEvent === 'Web Dev Team' && (
         <div>
@@ -86,6 +346,7 @@ function Team() {
           </div>
         </div>
       )}
+      
     </div>
   );
 }
