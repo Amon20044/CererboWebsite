@@ -100,7 +100,7 @@ const Navbar = () => {
         <div className="max-lg:text-xs max-lg:hidden flex flex-row justify-between bg-purple-500 rounded-xl px-16 py-4 w-[35%] mr-8">
           <NavLink href="/sponsors">Sponsors</NavLink>
           <NavLink href="/team">Team</NavLink>
-          <NavLink href="/contactUs">Contact_Us</NavLink>
+          <NavLink href="/contactus">Contact Us</NavLink>
         </div>
 
         {/* Hamburger Menu for Tablet/Mobile */}
@@ -135,7 +135,7 @@ const Navbar = () => {
             </motion.button>
             <div className="flex flex-col space-y-6 text-4xl text-center">
               <NavLink href="/">Home</NavLink>
-              {['Events', 'Merch', 'Sponsors', 'Team', 'Contact Us'].map((item, i) => (
+              {['Events', 'Merch', 'Sponsors', 'Team', 'ContactUs'].map((item, i) => (
                 <motion.div key={item} custom={i} variants={linkVariants}>
                   <NavLink href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-white">{item}</NavLink>
                 </motion.div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Import Framer Motion
-import portal from '../assets/LandingArea/Portal.png';
+import portal from '../assets/LandingArea/gif.gif';
 import Carousel from './Carousel'; // Import the Carousel component
 
 function About() {
