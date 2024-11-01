@@ -322,6 +322,7 @@ function Team() {
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[
+              { name: "Jaydeep Bejoy", position: "Member" },
               { name: "Ansh", position: "Member" },
             ].map((profile, index) => (
               <motion.div
