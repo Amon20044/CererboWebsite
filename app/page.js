@@ -22,21 +22,28 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    // Check if the loader has been shown before
+    const hasSeenLoader = localStorage.getItem("hasSeenLoader");
+    if (hasSeenLoader) {
+      setLoading(false); // Skip loader if it has been shown before
+      return;
+    }
+
     const handleProgress = () => {
-      // Simulate loading progress (for demonstration purposes)
-      // You can replace this with actual progress tracking if available
       let percent = 0;
       const interval = setInterval(() => {
-        percent += 10; // Increment progress
+        percent += 10;
         setProgress(percent);
         if (percent >= 100) {
           clearInterval(interval);
           setTimeout(() => {
-            setIsVisible(false); // Hide the loader after opacity transition
-            setLoading(false); // Hide the loader when progress reaches 100%
-          }, 2000); // Match the CSS transition duration
+            setIsVisible(false);
+            setLoading(false);
+            // Store in localStorage to skip loader next time
+            localStorage.setItem("hasSeenLoader", "true");
+          }, 2000);
         }
-      }, 500); // Update every 500ms
+      }, 500);
     };
 
     // Initialize Lenis for smooth scrolling
@@ -63,7 +70,7 @@ export default function Home() {
   }, []);
 
   const handleLoaderTransitionEnd = () => {
-    // This callback can be used if additional actions are needed after loader transition
+    // Additional actions can be performed here if needed after loader transition
   };
 
   return (
