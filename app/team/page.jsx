@@ -16,6 +16,7 @@ function Team() {
         <h1 className='text-white text-3xl md:text-4xl'>OUR TEAM</h1>
         <div className="flex flex-wrap justify-center mt-6 space-x-3 space-y-2">
           {[
+            "Presidents",
             "Web Dev Team",
             "Sponsorship Team",
             "Public Relation Team",
@@ -33,6 +34,32 @@ function Team() {
           ))}
         </div>
       </div>
+
+      {/* Presidents*/}
+      {activeEvent === 'Presidents' && (
+        <div>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+            {[ 
+              { name: "Vaibhav Jonwal", position: "GYMKHAHA" },
+              { name: "Amon Sharma", position: "TECH. COMMITTEE" },
+            ].map((profile, index) => (
+              <motion.div
+                key={index}
+                className={`w-full sm:w-1/2 lg:w-1/3 p-2`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <ProfileCard
+                  name={profile.name}
+                  position={profile.position}
+                  team="web_dev"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Sponsorship Team*/}
       {activeEvent === 'Sponsorship Team' && (
@@ -250,6 +277,7 @@ function Team() {
               { name: "Vinay Saini", position: "Member" },
               { name: "Nitin Kumar", position: "Member" },
               { name: "Anuj Saha", position: "Member" },
+              { name: "Mohmed Husain", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
