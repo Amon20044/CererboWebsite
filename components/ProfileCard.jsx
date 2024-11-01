@@ -34,7 +34,7 @@ const ProfileCard = (props) => {
           {/* Front Side */}
           <div className="flip-card-image-front absolute inset-0">
             <Image
-              src={"/teams/" + props.team + "/" + props.name + ".avif"}
+              src={"/teams/" + props.team + "/" + props.name + ".jpg"}
               alt="Sample"
               layout="fill"
               objectFit="cover"
