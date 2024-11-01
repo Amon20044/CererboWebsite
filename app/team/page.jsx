@@ -37,10 +37,11 @@ function Team() {
       {/* Sponsorship Team*/}
       {activeEvent === 'Sponsorship Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Tushant Akar", position: "LEAD" },
+              { name: "Yatharth Shivhare", position: "LEAD" },
+              { name: "Ziyan Solkar", position: "Co-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -56,10 +57,9 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Ziyan Solkar", position: "Member" },
               { name: "Vinit Khandelwal", position: "Member" },
               { name: "Sourabh", position: "Member" },
               { name: "Priyanka Lotiya", position: "Member" },
@@ -88,10 +88,11 @@ function Team() {
       {/* Design Team */}
       {activeEvent === 'Design Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Amon Sharma", position: "LEAD" },
+              { name: "Rishabh Ahlawat", position: "LEAD" },
+              { name: "Mhd. Anas", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -107,10 +108,12 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
               { name: "Devyash Saini", position: "Member" },
+              { name: "Srushti Chewale", position: "Member" },
+              { name: "Shreetej Meshram", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -132,10 +135,10 @@ function Team() {
       {/* On-Ground Team */}
       {activeEvent === 'On-Ground Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Kunj Thakkar", position: "LEAD" },
+              { name: "Dhruv Sachdeva", position: "LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -151,7 +154,7 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
               { name: "Ansh", position: "Member" },
@@ -177,10 +180,10 @@ function Team() {
       {/* Logistics Team*/}
       {activeEvent === 'Logistics Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Sanket Trivedi", position: "LEAD" },
+              { name: "Maurya Patel", position: "LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -196,7 +199,7 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
               { name: "Devanshi", position: "Member" },
@@ -222,10 +225,10 @@ function Team() {
       {/*Public Relation Team*/}
       {activeEvent === 'Public Relation Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Shubham Gupta", position: "LEAD" },
+              { name: "Palkush Dave", position: "LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -241,12 +244,10 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
               { name: "Vinay Saini", position: "Member" },
-              { name: "Shubham Gupta", position: "Member" },
-              { name: "Palkush Dave", position: "Member" },
               { name: "Nitin Kumar", position: "Member" },
               { name: "Anuj Saha", position: "Member" },
             ].map((profile, index) => (
@@ -270,10 +271,11 @@ function Team() {
       {/* Web Dev Team */}
       {activeEvent === 'Web Dev Team' && (
         <div>
-          {/* <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
+          <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "KAUSTUBH DUSE", position: "LEAD" },
-              { name: "ABCD", position: "CO-LEAD" },
+              { name: "Amon Sharma", position: "LEAD" },
+              { name: "Kaustubh Duse", position: "LEAD" },
+              { name: "Devyash Saini", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -289,10 +291,9 @@ function Team() {
                 />
               </motion.div>
             ))}
-          </div> */}
+          </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
-            {[ 
-              { name: "Devyash Saini", position: "Member" },
+            {[
               { name: "Ansh", position: "Member" },
             ].map((profile, index) => (
               <motion.div
