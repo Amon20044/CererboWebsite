@@ -18,18 +18,11 @@ const Footer = () => {
             Fueling Innovation. Igniting Curiosity, and Shaping the Future of Tech—One Idea at a Time.
           </p>
           <div className="flex space-x-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/cerebro.iiitv/" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={25} className="text-black hover:text-gray-500" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={25} className="text-black hover:text-gray-500" />
-            </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-              <FaDiscord size={25} className="text-black hover:text-gray-500" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter size={25} className="text-black hover:text-gray-500" />
-            </a>
+            
+            
           </div>
         </div>
 
@@ -37,7 +30,7 @@ const Footer = () => {
         <div className="footer-item footer-middle flex-1 max-md:py-4">
           <h4 className="text-lg font-bold mb-2 text-black">Contact Us</h4>
           <p className="text-black">
-            📞 +91 95318 52385 <br />
+            📞 07929750281 <br />
             ✉️ cerebro@iiitvadodara.ac.in
           </p>
         </div>
@@ -53,7 +46,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center mt-6 max-md:py-4 text-black">
-        © 2024 Cerebro IIITV
+        © 2024-25 Cerebro IIITV
       </div>
     </footer>
   );
