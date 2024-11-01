@@ -4,7 +4,7 @@ import ProfileCard from "../../components/ProfileCard";
 import { motion } from "framer-motion";
 
 function Team() {
-  const [activeEvent, setActiveEvent] = useState("Design Team");
+  const [activeEvent, setActiveEvent] = useState("Presidents");
 
   const eventHandler = (eventName) => {
     setActiveEvent(eventName);
@@ -40,8 +40,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Vaibhav Jonwal", position: "GYMKHAHA" },
-              { name: "Amon Sharma", position: "TECH. COMMITTEE" },
+              { name: "Vaibhav Jonwal", position: "GYMKHAHA PRESIDENT" },
+              { name: "Amon Sharma", position: "TECH. COMMITTEE PRESIDENT" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -185,7 +185,7 @@ function Team() {
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
               { name: "Ansh", position: "Member" },
-              { name: "Karan", position: "Member" },
+              { name: "Karan", position: "Host" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
