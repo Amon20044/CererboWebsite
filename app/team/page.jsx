@@ -4,7 +4,7 @@ import ProfileCard from "../../components/ProfileCard";
 import { motion } from "framer-motion";
 
 function Team() {
-  const [activeEvent, setActiveEvent] = useState("Team1");
+  const [activeEvent, setActiveEvent] = useState("Web Dev Team");
 
   const eventHandler = (eventName) => {
     setActiveEvent(eventName);
