@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 // Import images correctly
-import img1 from '../assets/LandingArea/Image.png';
-import img2 from '../assets/LandingArea/Image.png';
-import img3 from '../assets/LandingArea/Image.png';
-import img4 from '../assets/LandingArea/Image.png';
+import img1 from '../assets/LandingArea/Image6.jpg';
+import img2 from '../assets/LandingArea/Image5.jpg';
+import img3 from '../assets/LandingArea/Image3.jpg';
+import img4 from '../assets/LandingArea/Image4.jpg';
 
 const images = [img1, img2, img3, img4]; // Use the imported images
 
