@@ -4,7 +4,7 @@ import ProfileCard from "../../components/ProfileCard";
 import { motion } from "framer-motion";
 
 function Team() {
-  const [activeEvent, setActiveEvent] = useState("Design Team");
+  const [activeEvent, setActiveEvent] = useState("On-Ground Team");
 
   const eventHandler = (eventName) => {
     setActiveEvent(eventName);
@@ -16,12 +16,12 @@ function Team() {
         <h1 className='text-white text-3xl md:text-4xl'>OUR TEAM</h1>
         <div className="flex flex-wrap justify-center mt-6 space-x-3 space-y-2">
           {[
-            "Web Dev Team",
             "Sponsorship Team",
             "Public Relation Team",
             "Logistics Team",
             "On-Ground Team",
             "Design Team",
+            "Web Dev Team"
           ].map((event) => (
             <button
               key={event}
@@ -39,9 +39,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Tushant Akar", position: "LEAD" },
-              { name: "Yatharth Shivhare", position: "LEAD" },
-              { name: "Ziyan Solkar", position: "Co-LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -53,20 +52,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="sponsorship"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Vinit Khandelwal", position: "Member" },
-              { name: "Sourabh", position: "Member" },
-              { name: "Priyanka Lotiya", position: "Member" },
-              { name: "Karan Lokchandani", position: "Member" },
-              { name: "Anuj Saha", position: "Member" },
-              { name: "Anika Garg", position: "Member" },
-              { name: "Aesha Ladani", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -78,7 +80,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="sponsorship"
                 />
               </motion.div>
             ))}
@@ -90,9 +91,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Amon Sharma", position: "LEAD" },
-              { name: "Rishabh Ahlawat", position: "LEAD" },
-              { name: "Mhd. Anas", position: "CO-LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -104,16 +104,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="design"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Shreetej Meshram", position: "Member" },
-              { name: "Srushti Chewale", position: "Member" },
-              { name: "Devyash Saini", position: "Member" }, 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -125,7 +132,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="design"
                 />
               </motion.div>
             ))}
@@ -137,8 +143,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Kunj Thakkar", position: "LEAD" },
-              { name: "Dhruv Sachdeva", position: "LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -150,15 +156,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="on_ground"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Ansh", position: "Member" },
-              { name: "Karan", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -170,7 +184,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="on_ground"
                 />
               </motion.div>
             ))}
@@ -182,8 +195,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Sanket Trivedi", position: "LEAD" },
-              { name: "Maurya Patel", position: "LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -195,15 +208,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="logistics"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Devanshi", position: "Member" },
-              { name: "Karan", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -215,7 +236,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="logistics"
                 />
               </motion.div>
             ))}
@@ -227,8 +247,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Shubham Gupta", position: "LEAD" },
-              { name: "Palkush Dave", position: "LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -240,16 +260,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="public_relations"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
             {[ 
-              { name: "Vinay Saini", position: "Member" },
-              { name: "Nitin Kumar", position: "Member" },
-              { name: "Anuj Saha", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -261,7 +288,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="public_relations"
                 />
               </motion.div>
             ))}
@@ -273,9 +299,8 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Amon Sharma", position: "LEAD" },
-              { name: "Kaustubh Duse", position: "LEAD" },
-              { name: "Devyash Saini", position: "CO-LEAD" },
+              { name: "KAUSTUBH DUSE", position: "LEAD" },
+              { name: "ABCD", position: "CO-LEAD" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -287,14 +312,23 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="web_dev"
                 />
               </motion.div>
             ))}
           </div>
           <div className='flex flex-wrap justify-center mt-10 gap-4'>
-            {[
-              { name: "Ansh", position: "Member" },
+            {[ 
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
+              { name: "XYZ", position: "Member" },
             ].map((profile, index) => (
               <motion.div
                 key={index}
@@ -306,7 +340,6 @@ function Team() {
                 <ProfileCard
                   name={profile.name}
                   position={profile.position}
-                  team="web_dev"
                 />
               </motion.div>
             ))}

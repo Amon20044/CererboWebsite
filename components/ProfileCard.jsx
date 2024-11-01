@@ -10,7 +10,6 @@ import "./ProfileCard.css"; // Ensure you import the CSS file
 
 const ProfileCard = (props) => {
   const cardRef = useRef(null);
-  console.log(props.team);
 
   useEffect(() => {
     // GSAP animation for card entrance
@@ -34,7 +33,7 @@ const ProfileCard = (props) => {
           {/* Front Side */}
           <div className="flip-card-image-front absolute inset-0">
             <Image
-              src={"/teams/" + props.team + "/" + props.name + ".avif"}
+              src={sampleimg}
               alt="Sample"
               layout="fill"
               objectFit="cover"
