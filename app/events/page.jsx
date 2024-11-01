@@ -129,7 +129,7 @@ function Events() {
             />
 
             <Card
-              title="RoboQuest"
+              title="Robo Rumble"
               image={roborumble}
               prize="Worth Rs. 19,200+ Prizes"
               description="Unleash Your Innovation! Build robots using any tech stack and hardware in this ultimate robotics showdown. Push the limits of creativity and engineering to craft cutting-edge machines that defy expectations!"
