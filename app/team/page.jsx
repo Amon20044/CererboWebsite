@@ -40,7 +40,7 @@ function Team() {
         <div>
           <div className='flex flex-wrap justify-center mt-10 px-4 md:px-8'>
             {[ 
-              { name: "Vaibhav Jonwal", position: "GYMKHAHA" },
+              { name: "vaibhav", position: "GYMKHAHA" },
               { name: "Amon Sharma", position: "TECH. COMMITTEE" },
             ].map((profile, index) => (
               <motion.div
